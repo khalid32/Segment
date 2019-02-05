@@ -1,0 +1,4 @@
+#Wed Jan 30 16:29:01 BDT 2019
+base.0=/home/k32/react_native_projects/Segment/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex
