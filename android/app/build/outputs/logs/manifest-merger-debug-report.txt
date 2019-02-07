@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-27:12
-INJECTED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-27:12
-INJECTED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-27:12
-INJECTED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-27:12
+ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-28:12
+INJECTED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-28:12
+INJECTED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-28:12
+INJECTED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-28:12
 MERGED from [:react-native-vector-icons] /home/k32/react_native_projects/Segment/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-linear-gradient] /home/k32/react_native_projects/Segment/node_modules/react-native-linear-gradient/android/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.react:react-native:0.58.3] /home/k32/.gradle/caches/transforms-1/files-1.1/react-native-0.58.3.aar/31509422b987583f44169126674825be/AndroidManifest.xml:2:1-15:12
@@ -41,20 +41,20 @@ MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /home/k32/.gradle/ca
 MERGED from [com.facebook.soloader:soloader:0.5.1] /home/k32/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/a575b28cfd624349bbdb26258e7b35d4/AndroidManifest.xml:2:1-13:12
 MERGED from [org.webkit:android-jsc:r174650] /home/k32/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/f2769db3558044e46d8866cdffee3aaa/AndroidManifest.xml:1:1-3:12
 MERGED from [com.facebook.fresco:fbcore:1.10.0] /home/k32/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/4ff5eef5ccaa464782822f08b1f20814/AndroidManifest.xml:2:1-9:12
-INJECTED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-27:12
-INJECTED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-27:12
-INJECTED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-27:12
+INJECTED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-28:12
+INJECTED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-28:12
+INJECTED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-28:12
 	package
 		ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:2:5-26
 		INJECTED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml
 		INJECTED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml
-		ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-27:12
+		ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-28:12
 		INJECTED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml
-		ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-27:12
+		ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-28:12
 		INJECTED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:11-69
@@ -69,7 +69,7 @@ MERGED from [com.facebook.react:react-native:0.58.3] /home/k32/.gradle/caches/tr
 	android:name
 		ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:5:22-75
 application
-ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:7:5-25:19
+ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:7:5-26:19
 MERGED from [com.facebook.react:react-native:0.58.3] /home/k32/.gradle/caches/transforms-1/files-1.1/react-native-0.58.3.aar/31509422b987583f44169126674825be/AndroidManifest.xml:13:5-20
 MERGED from [com.facebook.react:react-native:0.58.3] /home/k32/.gradle/caches/transforms-1/files-1.1/react-native-0.58.3.aar/31509422b987583f44169126674825be/AndroidManifest.xml:13:5-20
 MERGED from [com.android.support:support-compat:28.0.0] /home/k32/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/6c9b0a1c4d483856f18196bccbfc7f7d/AndroidManifest.xml:22:5-94
@@ -95,29 +95,31 @@ MERGED from [org.webkit:android-jsc:r174650] /home/k32/.gradle/caches/transforms
 	android:name
 		ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:8:7-38
 activity#com.segment.MainActivity
-ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:14:7-23:18
+ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:14:7-24:18
+	android:screenOrientation
+		ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:17:9-45
 	android:label
 		ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:16:9-41
 	android:windowSoftInputMode
-		ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:18:9-51
+		ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:19:9-51
 	android:configChanges
-		ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:17:9-79
+		ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:18:9-79
 	android:name
 		ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:15:9-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:19:9-22:25
+ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:20:9-23:25
 action#android.intent.action.MAIN
-ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:20:13-65
+ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:21:13-65
 	android:name
-		ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:20:21-62
+		ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:21:21-62
 category#android.intent.category.LAUNCHER
-ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:21:13-73
+ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:22:13-73
 	android:name
-		ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:21:23-70
+		ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:22:23-70
 activity#com.facebook.react.devsupport.DevSettingsActivity
-ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:24:7-84
+ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:25:7-84
 	android:name
-		ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:24:17-81
+		ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:25:17-81
 uses-sdk
 INJECTED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml
@@ -205,8 +207,8 @@ INJECTED from /home/k32/react_native_projects/Segment/android/app/src/main/Andro
 		ADDED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml
 		INJECTED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-IMPLIED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-27:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+IMPLIED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-28:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
 uses-permission#android.permission.READ_PHONE_STATE
-IMPLIED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-27:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+IMPLIED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-28:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-IMPLIED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-27:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE
+IMPLIED from /home/k32/react_native_projects/Segment/android/app/src/main/AndroidManifest.xml:1:1-28:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE
