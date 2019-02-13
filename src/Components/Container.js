@@ -54,7 +54,7 @@ export default class Container extends Component {
                     }
                     {
                         splashScreenLoading == false &&
-                    <LinearGradient colors={[gradient.IndexZero, gradient.IndexOne, gradient.IndexTwo, gradient.IndexThree, gradient.IndexFour]} style={{ flex: 1 }}>
+                    <LinearGradient colors={[...gradient]} style={{ flex: 1 }}>
                         {landingPanel == true && homePanel == false && registerPanel == false && LandingPage(this.goToHomePage)}
                         {landingPanel == false && homePanel == true && registerPanel == false && HomePage(this.backToLandingPage)}
                     </LinearGradient>
