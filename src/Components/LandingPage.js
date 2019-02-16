@@ -17,7 +17,7 @@ export const LandingPage = (goToHomePage) => (
         </View>
 
         <View style={{marginTop: height/3}}>
-            <OutlineButton title="Sign In" buttonStyle={{ borderColor: 'rgba(255, 235, 59, 1.0)', borderRadius: 25 }} textStyle={{color: 'rgba(255, 235, 59, 1.0)'}} onPressHandler={goToHomePage}/>
+            <OutlineButton title="Get Started" buttonStyle={{ borderColor: 'rgba(255, 235, 59, 1.0)', borderRadius: 25 }} textStyle={{color: 'rgba(255, 235, 59, 1.0)'}} onPressHandler={goToHomePage}/>
         </View>
     </View>
     // <ImageBackground source={ground} style={{ height, width }} resizeMode="cover" blurRadius={6}>

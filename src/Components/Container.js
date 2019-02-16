@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import {Platform, ImageBackground, StyleSheet, Dimensions, Text, View} from 'react-native';
+import React, { Component, Fragment } from 'react';
+import {Platform, ImageBackground, ActivityIndicator, StyleSheet, Dimensions, Text, View} from 'react-native';
 import { LandingPage } from './LandingPage';
 import { HomePage } from './HomePage'
 import { LinearGradientGenerator } from '../Utils/LinearGradientGenerator';
@@ -7,21 +7,21 @@ import LinearGradient from 'react-native-linear-gradient';
 
 const { width, height } = Dimensions.get('window');
 
-const instructions = Platform.select({
-    ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-    android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
 export default class Container extends Component {
         constructor(){
             super();
             this.state = {
+                splashScreenLoading: true,
                 landingPanel: true,
                 homePanel: false,
                 registerPanel: false
             }
+        }
+
+        componentDidMount = () => {
+            setTimeout(() => {
+                this.setState({ splashScreenLoading: false });
+            }, 5000);
         }
 
         goToHomePage = () => {
@@ -41,14 +41,26 @@ export default class Container extends Component {
         }
     
         render() {
-            const { landingPanel, homePanel, registerPanel } = this.state;
+            const { splashScreenLoading, landingPanel, homePanel, registerPanel } = this.state;
             const gradient = LinearGradientGenerator(landingPanel, homePanel, registerPanel);
             console.log('gradient -> ', gradient);
             return(
-                <LinearGradient colors={[gradient.IndexZero, gradient.IndexOne, gradient.IndexTwo, gradient.IndexThree, gradient.IndexFour]} style={{ flex: 1 }}>
-                    {landingPanel == true && homePanel == false && registerPanel == false && LandingPage(this.goToHomePage)}
-                    {landingPanel == false && homePanel == true && registerPanel == false && HomePage(this.backToLandingPage)}
-                </LinearGradient>
+                <Fragment>
+                    {
+                        splashScreenLoading == true && 
+                        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                            <ActivityIndicator size="large" color="white" />
+                        </View>
+                    }
+                    {
+                        splashScreenLoading == false &&
+                    <LinearGradient colors={[...gradient]} style={{ flex: 1 }}>
+                        {landingPanel == true && homePanel == false && registerPanel == false && LandingPage(this.goToHomePage)}
+                        {landingPanel == false && homePanel == true && registerPanel == false && HomePage(this.backToLandingPage)}
+                    </LinearGradient>
+                    }
+                </Fragment>
+                
             );
             // if(landingPanel == true && loginPanel == false && registerPanel == false){
             //     return <LandingPage />;

@@ -21,7 +21,7 @@ export const OutlineButton = ({buttonStyle, textStyle, onPressHandler, title}) =
 		<View style={[styles.outline, buttonStyle]}>
 			<Text style={[styles.buttonText, textStyle]} >
 				{title}
-			</Text>				
+			</Text>
 		</View>
 	</TouchableOpacity>
 );
