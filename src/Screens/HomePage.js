@@ -1,6 +1,6 @@
 import React from 'react';
 import {Dimensions, ImageBackground, StyleSheet, Text, View, Image} from 'react-native';
-import { OutlineButton } from './CustomComponents/ButtonLocal';
+import { OutlineButton } from '../Components/CustomComponents/ButtonLocal';
 
 const { width, height } = Dimensions.get('window');
 

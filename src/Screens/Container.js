@@ -2,6 +2,8 @@ import React, { Component, Fragment } from 'react';
 import {Platform, ImageBackground, Alert, AsyncStorage, ActivityIndicator, StyleSheet, Dimensions, Text, View} from 'react-native';
 import { LandingPage } from './LandingPage';
 import { HomePage } from './HomePage'
+import { SplashScreen } from './SplashScreen';
+import { IntroScreen } from './IntroScreen';
 import { LinearGradientGenerator } from '../Utils/LinearGradientGenerator';
 import { CheckIfFirstLaunch } from '../Utils/CheckIfFirstLaunch';
 import LinearGradient from 'react-native-linear-gradient';
@@ -55,25 +57,17 @@ export default class Container extends Component {
             
             return(
                 <Fragment>
-                    {
-                        splashScreenLoading == true && isFirstLaunch == false &&
-                        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-                            <ActivityIndicator size="large" color="white" />
-                        </View>
-                    }
-                    {
-                        splashScreenLoading == false && isFirstLaunch == true && 
-                        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'pink'}}>
-                            <Text style={{color: 'white'}}>sdfghjklsadfghjklsdfghjkdfghjkl</Text>
-                        </View>
-                    }
+                    {IntroScreen()}
+
+                    {/* { splashScreenLoading == true && isFirstLaunch == false && SplashScreen() }
+                    { splashScreenLoading == false && isFirstLaunch == true && IntroScreen() }
                     {
                         splashScreenLoading == false && isFirstLaunch == false && 
                     <LinearGradient colors={[...gradient]} style={{ flex: 1 }}>
                         {landingPanel == true && homePanel == false && registerPanel == false && LandingPage(this.goToHomePage)}
                         {landingPanel == false && homePanel == true && registerPanel == false && HomePage(this.backToLandingPage)}
                     </LinearGradient>
-                    }
+                    } */}
                 </Fragment>
                 
             );

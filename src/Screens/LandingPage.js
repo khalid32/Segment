@@ -1,7 +1,6 @@
 import React from 'react';
 import {Dimensions, ImageBackground, StyleSheet, Text, View, Image} from 'react-native';
-import { OutlineButton } from './CustomComponents/ButtonLocal';
-
+import { OutlineButton } from '../Components/CustomComponents/ButtonLocal';
 
 const { width, height } = Dimensions.get('window');
 
@@ -20,8 +19,4 @@ export const LandingPage = (goToHomePage) => (
             <OutlineButton title="Get Started" buttonStyle={{ borderColor: 'rgba(255, 235, 59, 1.0)', borderRadius: 25 }} textStyle={{color: 'rgba(255, 235, 59, 1.0)'}} onPressHandler={goToHomePage}/>
         </View>
     </View>
-    // <ImageBackground source={ground} style={{ height, width }} resizeMode="cover" blurRadius={6}>
-            
-    // </ImageBackground>
-    
-)
+);
