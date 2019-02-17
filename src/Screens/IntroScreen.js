@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Platform, TouchableOpacity, ImageBackground, ScrollView, Alert, StyleSheet, Dimensions, Text, View} from 'react-native';
 import { VectorIconGenerator } from '../Utils/VectorIconGenerator';
+import { BubbleView } from '../Components/CustomComponents/BubbleView';
 
 const { width, height } = Dimensions.get('window');
 
@@ -53,6 +54,12 @@ export default class IntroScreen extends Component{
         this.setState({xOffset: e.nativeEvent.contentOffset.x })
     }
 
+    bubbleView = ( customStyle={} ) => (
+        <View style={[{flex: 0.25}, styles.adjustCenter]}>
+            <View style={[styles.bubbleIndicator, customStyle ]} />
+        </View>
+    );
+
     render(){
         const { endAppear, xOffset } = this.state;
         console.log("xOffset -> ", xOffset);
@@ -72,7 +79,13 @@ export default class IntroScreen extends Component{
                     <ImageBackground source={multiPic.pic3} style={{width, height}}></ImageBackground>
                     <ImageBackground source={multiPic.pic4} style={{width, height}}></ImageBackground>
                 </ScrollView>
-                { endAppear == true && 
+                <View style={ styles.adjustBubbles }>
+                    <BubbleView />
+                    <BubbleView />
+                    <BubbleView />
+                    <BubbleView />
+                </View>
+                {/* { endAppear == true && 
                     
                     <View style={ styles.skipButtonPanel }>
                         <TouchableOpacity style={[styles.introSkipButton, styles.adjustCenter]} onPress={this.touchToChange}>
@@ -83,7 +96,7 @@ export default class IntroScreen extends Component{
                             />
                         </TouchableOpacity>
                     </View>
-                }
+                } */}
             </View>
         );
     }
@@ -105,5 +118,7 @@ const styles = StyleSheet.create({
     },
     introSkipButton: {
         height: 50, width: 50, borderRadius: 50, backgroundColor: 'rgba(99, 110, 114, 0.5)'
-    }
+    },
+    adjustBubbles: { flexDirection: 'row', height: 30, width: width/3, position: 'absolute', bottom: width/5, left: width/3 }
+
 });
