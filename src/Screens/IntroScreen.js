@@ -10,6 +10,7 @@ const multiPic = {
     pic2: require('../Assets/Intro_Screen/alone.jpg'),
     pic3: require('../Assets/Intro_Screen/Nature5.jpg'),
     pic4: require('../Assets/Intro_Screen/Red_sunset6789_rectangle.jpg'),
+    endAppear: false,
 }
 
 export default class IntroScreen extends Component{
@@ -17,7 +18,7 @@ export default class IntroScreen extends Component{
         super(props);
 
         this.state = {
-            endAppear: false,
+            // endAppear: false,
             xOffset: 0,
         }
 
@@ -25,44 +26,24 @@ export default class IntroScreen extends Component{
         this.counter = 0;
     }
 
-    touchToChange = () => {
-
-        switch(this.counter){
-            case 0:
-                this._scrollView.scrollTo({x: width});
-                this.counter++;
-                break;
-            case 1:
-                this._scrollView.scrollTo({x: width * 2});
-                this.counter++;
-                break;
-            case 2:
-                this._scrollView.scrollTo({x: width * 3});
-                this.counter++;
-                break;
-            case 3:
-                this._scrollView.scrollTo({x: 0});
-                this.counter = 0;
-                break;
-
-            default:
+    componentDidUpdate = () => {
+        const { xOffset } = this.state;
+        if(xOffset == width * 3){
+            multiPic.endAppear = true;
         }
     }
 
-    whenDragEnds = (e) => {
-        // this.setState({ endAppear: true });
-        this.setState({xOffset: e.nativeEvent.contentOffset.x })
+    touchToChange = () => {
+
     }
 
-    bubbleView = ( customStyle={} ) => (
-        <View style={[{flex: 0.25}, styles.adjustCenter]}>
-            <View style={[styles.bubbleIndicator, customStyle ]} />
-        </View>
-    );
+    whenDragEnds = (e) => {
+        this.setState({xOffset: e.nativeEvent.contentOffset.x });
+    }
 
     render(){
-        const { endAppear, xOffset } = this.state;
-        console.log("xOffset -> ", xOffset);
+        const { xOffset } = this.state;
+
         return(
             <View style={[{flex: 1}, styles.adjustCenter]}>
                 <ScrollView
@@ -80,12 +61,12 @@ export default class IntroScreen extends Component{
                     <ImageBackground source={multiPic.pic4} style={{width, height}}></ImageBackground>
                 </ScrollView>
                 <View style={ styles.adjustBubbles }>
-                    <BubbleView />
-                    <BubbleView />
-                    <BubbleView />
-                    <BubbleView />
+                    <BubbleView customStyle={{backgroundColor: xOffset == 0 ? 'rgba(223, 230, 233,1.0)' : 'rgba(223, 230, 233, 0.5)'}}/>
+                    <BubbleView customStyle={{backgroundColor: xOffset == width ? 'rgba(223, 230, 233,1.0)' : 'rgba(223, 230, 233, 0.5)'}} />
+                    <BubbleView customStyle={{backgroundColor: xOffset == width * 2 ? 'rgba(223, 230, 233,1.0)' : 'rgba(223, 230, 233, 0.5)'}} />
+                    <BubbleView customStyle={{backgroundColor: xOffset == width * 3 ? 'rgba(223, 230, 233,1.0)' : 'rgba(223, 230, 233, 0.5)'}} />
                 </View>
-                {/* { endAppear == true && 
+                { multiPic.endAppear == true && 
                     
                     <View style={ styles.skipButtonPanel }>
                         <TouchableOpacity style={[styles.introSkipButton, styles.adjustCenter]} onPress={this.touchToChange}>
@@ -96,7 +77,7 @@ export default class IntroScreen extends Component{
                             />
                         </TouchableOpacity>
                     </View>
-                } */}
+                }
             </View>
         );
     }
@@ -120,5 +101,4 @@ const styles = StyleSheet.create({
         height: 50, width: 50, borderRadius: 50, backgroundColor: 'rgba(99, 110, 114, 0.5)'
     },
     adjustBubbles: { flexDirection: 'row', height: 30, width: width/3, position: 'absolute', bottom: width/5, left: width/3 }
-
 });
