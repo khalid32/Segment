@@ -15,11 +15,17 @@ export default class IntroScreen extends Component{
     constructor(props){
         super(props);
 
+        this.state = {
+            endAppear: false,
+            xOffset: 0,
+        }
+
         this._scrollView = null;
         this.counter = 0;
     }
 
     touchToChange = () => {
+
         switch(this.counter){
             case 0:
                 this._scrollView.scrollTo({x: width});
@@ -42,7 +48,14 @@ export default class IntroScreen extends Component{
         }
     }
 
+    whenDragEnds = (e) => {
+        // this.setState({ endAppear: true });
+        this.setState({xOffset: e.nativeEvent.contentOffset.x })
+    }
+
     render(){
+        const { endAppear, xOffset } = this.state;
+        console.log("xOffset -> ", xOffset);
         return(
             <View style={[{flex: 1}, styles.adjustCenter]}>
                 <ScrollView
@@ -51,6 +64,7 @@ export default class IntroScreen extends Component{
                 horizontal={true}
                 pagingEnabled={true}
                 showsHorizontalScrollIndicator={false}
+                onMomentumScrollEnd={(e) => this.whenDragEnds(e)}
                 onContentSizeChange={(conHeight, conWidth) => { this.scrollHeight = conHeight }}
                 >
                     <ImageBackground source={multiPic.pic1} style={{width, height}}></ImageBackground>
@@ -58,17 +72,18 @@ export default class IntroScreen extends Component{
                     <ImageBackground source={multiPic.pic3} style={{width, height}}></ImageBackground>
                     <ImageBackground source={multiPic.pic4} style={{width, height}}></ImageBackground>
                 </ScrollView>
-                <View style={styles.navigateMethod}>
-                    <View style={{flex: 0.2}}></View>
-                    <View style={{flex: 0.8}}></View>                    
-                    <TouchableOpacity style={[{flex: 0.2}, styles.adjustCenter]} onPress={this.touchToChange}>
-                        <VectorIconGenerator 
-                        iconBundled="Ionicons"
-                        iconName="ios-arrow-forward"
-                        iconSize={23}
-                        />
-                    </TouchableOpacity>
-                </View>
+                { endAppear == true && 
+                    
+                    <View style={ styles.skipButtonPanel }>
+                        <TouchableOpacity style={[styles.introSkipButton, styles.adjustCenter]} onPress={this.touchToChange}>
+                            <VectorIconGenerator
+                            iconBundled="Ionicons"
+                            iconName="ios-arrow-forward"
+                            iconSize={23}
+                            />
+                        </TouchableOpacity>
+                    </View>
+                }
             </View>
         );
     }
@@ -84,5 +99,11 @@ const styles = StyleSheet.create({
         position: 'absolute',
         left: 0, bottom: 0, right: 0,
         backgroundColor: 'rgba(99, 110, 114, 0.5)', 
+    },
+    skipButtonPanel: {
+        height: width/5, width: width/5, position: 'absolute', right: 0, bottom: 0
+    },
+    introSkipButton: {
+        height: 50, width: 50, borderRadius: 50, backgroundColor: 'rgba(99, 110, 114, 0.5)'
     }
 });
