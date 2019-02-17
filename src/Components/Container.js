@@ -1,8 +1,9 @@
 import React, { Component, Fragment } from 'react';
-import {Platform, ImageBackground, ActivityIndicator, StyleSheet, Dimensions, Text, View} from 'react-native';
+import {Platform, ImageBackground, Alert, AsyncStorage, ActivityIndicator, StyleSheet, Dimensions, Text, View} from 'react-native';
 import { LandingPage } from './LandingPage';
 import { HomePage } from './HomePage'
 import { LinearGradientGenerator } from '../Utils/LinearGradientGenerator';
+import { CheckIfFirstLaunch } from '../Utils/CheckIfFirstLaunch';
 import LinearGradient from 'react-native-linear-gradient';
 
 const { width, height } = Dimensions.get('window');
@@ -11,6 +12,9 @@ export default class Container extends Component {
         constructor(){
             super();
             this.state = {
+                isFirstLaunch: false,
+                hasCheckedAsyncStorage: false,
+
                 splashScreenLoading: true,
                 landingPanel: true,
                 homePanel: false,
@@ -18,17 +22,20 @@ export default class Container extends Component {
             }
         }
 
-        componentDidMount = () => {
+        componentDidMount = async () => {
             setTimeout(() => {
                 this.setState({ splashScreenLoading: false });
-            }, 5000);
+            }, 3000);
+
+            const isFirstLaunch = await CheckIfFirstLaunch();
+            this.setState({ isFirstLaunch, hasCheckedAsyncStorage: true });
         }
 
         goToHomePage = () => {
             this.setState({ 
                 landingPanel: false,
                 homePanel: true,
-                registerPanel: false
+                registerPanel: false,
             });
         }
 
@@ -40,20 +47,28 @@ export default class Container extends Component {
             });
         }
     
-        render() {
-            const { splashScreenLoading, landingPanel, homePanel, registerPanel } = this.state;
-            const gradient = LinearGradientGenerator(landingPanel, homePanel, registerPanel);
-            console.log('gradient -> ', gradient);
+        render() {            
+            const { isFirstLaunch, hasCheckedAsyncStorage, splashScreenLoading, landingPanel, homePanel, registerPanel } = this.state;
+            const gradient = LinearGradientGenerator({landingPanel, homePanel, registerPanel});
+            
+            if(!hasCheckedAsyncStorage){ return null; }
+            
             return(
                 <Fragment>
                     {
-                        splashScreenLoading == true && 
+                        splashScreenLoading == true && isFirstLaunch == false &&
                         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                             <ActivityIndicator size="large" color="white" />
                         </View>
                     }
                     {
-                        splashScreenLoading == false &&
+                        splashScreenLoading == false && isFirstLaunch == true && 
+                        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'pink'}}>
+                            <Text style={{color: 'white'}}>sdfghjklsadfghjklsdfghjkdfghjkl</Text>
+                        </View>
+                    }
+                    {
+                        splashScreenLoading == false && isFirstLaunch == false && 
                     <LinearGradient colors={[...gradient]} style={{ flex: 1 }}>
                         {landingPanel == true && homePanel == false && registerPanel == false && LandingPage(this.goToHomePage)}
                         {landingPanel == false && homePanel == true && registerPanel == false && HomePage(this.backToLandingPage)}
@@ -62,19 +77,6 @@ export default class Container extends Component {
                 </Fragment>
                 
             );
-            // if(landingPanel == true && loginPanel == false && registerPanel == false){
-            //     return <LandingPage />;
-            // }
-            // else{
-            //     return (
-            //         <View style={styles.container}>
-            //         <Text style={styles.welcome}>Welcome to React Native!</Text>
-            //         <Text style={styles.instructions}>To get started, edit App.js</Text>
-            //         <Text style={styles.instructions}>{instructions}</Text>
-            //         </View>
-            //     );
-            // }
-        
         }
     }
 
