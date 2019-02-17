@@ -3,7 +3,7 @@ import {Platform, ImageBackground, Alert, AsyncStorage, ActivityIndicator, Style
 import { LandingPage } from './LandingPage';
 import { HomePage } from './HomePage'
 import { SplashScreen } from './SplashScreen';
-import { IntroScreen } from './IntroScreen';
+import IntroScreen from './IntroScreen';
 import { LinearGradientGenerator } from '../Utils/LinearGradientGenerator';
 import { CheckIfFirstLaunch } from '../Utils/CheckIfFirstLaunch';
 import LinearGradient from 'react-native-linear-gradient';
@@ -57,7 +57,7 @@ export default class Container extends Component {
             
             return(
                 <Fragment>
-                    {IntroScreen()}
+                    <IntroScreen />
 
                     {/* { splashScreenLoading == true && isFirstLaunch == false && SplashScreen() }
                     { splashScreenLoading == false && isFirstLaunch == true && IntroScreen() }
