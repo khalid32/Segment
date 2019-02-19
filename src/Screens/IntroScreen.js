@@ -61,10 +61,10 @@ export default class IntroScreen extends Component{
                     <ImageBackground source={multiPic.pic4} style={{width, height}}></ImageBackground>
                 </ScrollView>
                 <View style={ styles.adjustBubbles }>
-                    <BubbleView customStyle={{backgroundColor: xOffset == 0 ? 'rgba(223, 230, 233,1.0)' : 'rgba(223, 230, 233, 0.5)'}}/>
-                    <BubbleView customStyle={{backgroundColor: xOffset == width ? 'rgba(223, 230, 233,1.0)' : 'rgba(223, 230, 233, 0.5)'}} />
-                    <BubbleView customStyle={{backgroundColor: xOffset == width * 2 ? 'rgba(223, 230, 233,1.0)' : 'rgba(223, 230, 233, 0.5)'}} />
-                    <BubbleView customStyle={{backgroundColor: xOffset == width * 3 ? 'rgba(223, 230, 233,1.0)' : 'rgba(223, 230, 233, 0.5)'}} />
+                    <BubbleView customStyle={ xOffset == 0 ? styles.showBubbleColor : styles.hideBubbleColor }/>
+                    <BubbleView customStyle={ xOffset == width ? styles.showBubbleColor : styles.hideBubbleColor } />
+                    <BubbleView customStyle={ xOffset == width * 2 ? styles.showBubbleColor : styles.hideBubbleColor} />
+                    <BubbleView customStyle={ xOffset == width * 3 ? styles.showBubbleColor : styles.hideBubbleColor} />
                 </View>
 
                 <View style={ styles.skipButtonPanel }>
@@ -103,5 +103,7 @@ const styles = StyleSheet.create({
     introSkipButton: {
         height: 35, width: 90, borderRadius: 25, borderWidth: 2, borderColor: 'rgba(223, 230, 233,1.0)'
     },
-    adjustBubbles: { flexDirection: 'row', height: 30, width: width/3, position: 'absolute', bottom: width/8, left: width/3 }
+    adjustBubbles: { flexDirection: 'row', height: 30, width: width/3, position: 'absolute', bottom: width/8, left: width/3 },
+    showBubbleColor: {backgroundColor: 'rgba(223, 230, 233,1.0)'},
+    hideBubbleColor: { borderWidth: 1, borderColor: 'rgba(223, 230, 233, 0.7)' },
 });

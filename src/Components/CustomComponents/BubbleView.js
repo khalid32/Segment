@@ -11,5 +11,5 @@ export const BubbleView = ({ customStyle={} }) => (
 
 const styles = StyleSheet.create({
     adjustCenter: { justifyContent: 'center', alignItems: 'center' },
-    bubbleIndicator: { height: 10, width: 10, backgroundColor: 'white', borderRadius: 50 }
+    bubbleIndicator: { height: 10, width: 10, borderRadius: 50 }
 })
