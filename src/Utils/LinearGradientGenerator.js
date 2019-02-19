@@ -1,4 +1,6 @@
-export const LinearGradientGenerator = (landingPanel, homePanel, registerPanel) => {
+export const LinearGradientGenerator = (body) => {
+    const { landingPanel, homePanel, registerPanel } = body;
+    
     // const colorIndex = {
     //     IndexZero: '', IndexOne: '', IndexTwo: '', IndexThree: '', IndexFour: ''
     // }

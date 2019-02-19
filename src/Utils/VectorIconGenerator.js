@@ -13,7 +13,7 @@ import Octicons from 'react-native-vector-icons/Octicons';
 import Zocial from 'react-native-vector-icons/Zocial';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 
-export const vectorIconGenerator = ({iconBundled="Ionicons", iconName="md-home", iconColor='white', iconSize=18, iconStyle={}}) => {
+export const VectorIconGenerator = ({iconBundled="Ionicons", iconName="md-home", iconColor='white', iconSize=18, iconStyle={}}) => {
     
     if(iconBundled == 'AntDesign'){
         return <AntDesign name={iconName} size={iconSize} color={iconColor} style={iconStyle}/>
