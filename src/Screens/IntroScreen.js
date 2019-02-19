@@ -66,18 +66,21 @@ export default class IntroScreen extends Component{
                     <BubbleView customStyle={{backgroundColor: xOffset == width * 2 ? 'rgba(223, 230, 233,1.0)' : 'rgba(223, 230, 233, 0.5)'}} />
                     <BubbleView customStyle={{backgroundColor: xOffset == width * 3 ? 'rgba(223, 230, 233,1.0)' : 'rgba(223, 230, 233, 0.5)'}} />
                 </View>
-                { multiPic.endAppear == true && 
-                    
-                    <View style={ styles.skipButtonPanel }>
-                        <TouchableOpacity style={[styles.introSkipButton, styles.adjustCenter]} onPress={this.touchToChange}>
+
+                <View style={ styles.skipButtonPanel }>
+                    <TouchableOpacity style={[{flexDirection: 'row'}, styles.introSkipButton, styles.adjustCenter]} onPress={this.touchToChange}>
+                        <View style={[{flex: 0.7 }, styles.adjustCenter]}>
+                            <Text style={{textAlign: 'center', color: 'rgba(223, 230, 233,1.0)'}}>Skip</Text>
+                        </View>
+                        <View style={[{flex: 0.3 }, styles.adjustCenter]}>
                             <VectorIconGenerator
                             iconBundled="Ionicons"
                             iconName="ios-arrow-forward"
                             iconSize={23}
                             />
-                        </TouchableOpacity>
-                    </View>
-                }
+                        </View>
+                    </TouchableOpacity>
+                </View>
             </View>
         );
     }
@@ -95,10 +98,10 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(99, 110, 114, 0.5)', 
     },
     skipButtonPanel: {
-        height: width/5, width: width/5, position: 'absolute', right: 0, bottom: 0
+        height: width/8, width: width/3.5, position: 'absolute', right: 0, bottom: 0
     },
     introSkipButton: {
-        height: 50, width: 50, borderRadius: 50, backgroundColor: 'rgba(99, 110, 114, 0.5)'
+        height: 35, width: 90, borderRadius: 25, borderWidth: 2, borderColor: 'rgba(223, 230, 233,1.0)'
     },
-    adjustBubbles: { flexDirection: 'row', height: 30, width: width/3, position: 'absolute', bottom: width/5, left: width/3 }
+    adjustBubbles: { flexDirection: 'row', height: 30, width: width/3, position: 'absolute', bottom: width/8, left: width/3 }
 });
