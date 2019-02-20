@@ -34,10 +34,10 @@ export default class IntroScreen extends Component{
     }
 
     touchToChange = () => {
-
+        this.props.skipIntro();
     }
 
-    whenDragEnds = (e) => {
+    detectPaging = (e) => {
         this.setState({xOffset: e.nativeEvent.contentOffset.x });
     }
 
@@ -52,7 +52,7 @@ export default class IntroScreen extends Component{
                 horizontal={true}
                 pagingEnabled={true}
                 showsHorizontalScrollIndicator={false}
-                onMomentumScrollEnd={(e) => this.whenDragEnds(e)}
+                onMomentumScrollEnd={(e) => this.detectPaging(e)}
                 onContentSizeChange={(conHeight, conWidth) => { this.scrollHeight = conHeight }}
                 >
                     <ImageBackground source={multiPic.pic1} style={{width, height}}></ImageBackground>
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
         height: width/8, width: width/3.5, position: 'absolute', right: 0, bottom: 0
     },
     introSkipButton: {
-        height: 35, width: 90, borderRadius: 25, borderWidth: 2, borderColor: 'rgba(223, 230, 233,1.0)'
+        height: 35, width: 90, borderRadius: 25, borderWidth: 2, borderColor: 'rgba(223, 230, 233, 0.7)'
     },
     adjustBubbles: { flexDirection: 'row', height: 30, width: width/3, position: 'absolute', bottom: width/8, left: width/3 },
     showBubbleColor: {backgroundColor: 'rgba(223, 230, 233,1.0)'},
