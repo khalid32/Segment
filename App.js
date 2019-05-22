@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { ImageBackground, Dimensions, StatusBar } from 'react-native';
-import Container from './src/Components/Container';
+import Container from './src/Screens/Container';
 
 const { width, height } = Dimensions.get('window');
 const backdrop = require('./src/Assets/architecture-2893844_1920.jpg');

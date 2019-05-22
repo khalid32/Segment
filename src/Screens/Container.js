@@ -57,17 +57,20 @@ export default class Container extends Component {
             
             return(
                 <Fragment>
-                    <IntroScreen />
+                    {/* <IntroScreen /> */}
 
-                    {/* { splashScreenLoading == true && isFirstLaunch == false && SplashScreen() }
-                    { splashScreenLoading == false && isFirstLaunch == true && IntroScreen() }
+                    { splashScreenLoading == true && isFirstLaunch == false && SplashScreen() }
+                    { splashScreenLoading == false && isFirstLaunch == true && 
+                        <IntroScreen 
+                            skipIntro={() => this.setState({ isFirstLaunch: false })}
+                    /> }
                     {
                         splashScreenLoading == false && isFirstLaunch == false && 
                     <LinearGradient colors={[...gradient]} style={{ flex: 1 }}>
                         {landingPanel == true && homePanel == false && registerPanel == false && LandingPage(this.goToHomePage)}
                         {landingPanel == false && homePanel == true && registerPanel == false && HomePage(this.backToLandingPage)}
                     </LinearGradient>
-                    } */}
+                    }
                 </Fragment>
                 
             );
