@@ -532,6 +532,10 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen subtitle_corner_radius
+dimen subtitle_outline_width
+dimen subtitle_shadow_offset
+dimen subtitle_shadow_radius
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -975,6 +979,7 @@ string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
 string gcm_fallback_notification_channel_label
+string header_description
 string image_button_description
 string image_description
 string link_description
@@ -1401,5 +1406,4 @@ styleable Toolbar android_gravity android_minHeight buttonGravity collapseConten
 styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewStubCompat android_id android_layout android_inflatedId
-xml network_security_config
-xml preferences
+xml rn_dev_preferences

@@ -561,14 +561,18 @@ public final class R {
         public static final int notification_subtext_size = 0x7f050067;
         public static final int notification_top_pad = 0x7f050068;
         public static final int notification_top_pad_large_text = 0x7f050069;
-        public static final int tooltip_corner_radius = 0x7f05006a;
-        public static final int tooltip_horizontal_padding = 0x7f05006b;
-        public static final int tooltip_margin = 0x7f05006c;
-        public static final int tooltip_precise_anchor_extra_offset = 0x7f05006d;
-        public static final int tooltip_precise_anchor_threshold = 0x7f05006e;
-        public static final int tooltip_vertical_padding = 0x7f05006f;
-        public static final int tooltip_y_offset_non_touch = 0x7f050070;
-        public static final int tooltip_y_offset_touch = 0x7f050071;
+        public static final int subtitle_corner_radius = 0x7f05006a;
+        public static final int subtitle_outline_width = 0x7f05006b;
+        public static final int subtitle_shadow_offset = 0x7f05006c;
+        public static final int subtitle_shadow_radius = 0x7f05006d;
+        public static final int tooltip_corner_radius = 0x7f05006e;
+        public static final int tooltip_horizontal_padding = 0x7f05006f;
+        public static final int tooltip_margin = 0x7f050070;
+        public static final int tooltip_precise_anchor_extra_offset = 0x7f050071;
+        public static final int tooltip_precise_anchor_threshold = 0x7f050072;
+        public static final int tooltip_vertical_padding = 0x7f050073;
+        public static final int tooltip_y_offset_non_touch = 0x7f050074;
+        public static final int tooltip_y_offset_touch = 0x7f050075;
     }
     public static final class drawable {
         private drawable() {}
@@ -994,12 +998,13 @@ public final class R {
         public static final int common_signin_button_text = 0x7f0b0051;
         public static final int common_signin_button_text_long = 0x7f0b0052;
         public static final int gcm_fallback_notification_channel_label = 0x7f0b0053;
-        public static final int image_button_description = 0x7f0b0054;
-        public static final int image_description = 0x7f0b0055;
-        public static final int link_description = 0x7f0b0056;
-        public static final int search_description = 0x7f0b0057;
-        public static final int search_menu_title = 0x7f0b0058;
-        public static final int status_bar_notification_info_overflow = 0x7f0b0059;
+        public static final int header_description = 0x7f0b0054;
+        public static final int image_button_description = 0x7f0b0055;
+        public static final int image_description = 0x7f0b0056;
+        public static final int link_description = 0x7f0b0057;
+        public static final int search_description = 0x7f0b0058;
+        public static final int search_menu_title = 0x7f0b0059;
+        public static final int status_bar_notification_info_overflow = 0x7f0b005a;
     }
     public static final class style {
         private style() {}
@@ -1912,7 +1917,6 @@ public final class R {
     public static final class xml {
         private xml() {}
 
-        public static final int network_security_config = 0x7f0e0000;
-        public static final int preferences = 0x7f0e0001;
+        public static final int rn_dev_preferences = 0x7f0e0000;
     }
 }

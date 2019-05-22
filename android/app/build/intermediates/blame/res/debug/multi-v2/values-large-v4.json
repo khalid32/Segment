@@ -4,7 +4,7 @@
             "outputFile": "/home/k32/react_native_projects/Segment/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "/home/k32/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/0e65d02eda5ec26c51b7b8b56003c3b0/res/values-large-v4/values-large-v4.xml",
+                    "source": "/home/k32/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/79f2d73f48f64b632fd76ffee57972f0/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
