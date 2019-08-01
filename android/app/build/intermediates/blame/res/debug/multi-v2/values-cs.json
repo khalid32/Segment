@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/k32/react_native_projects/Segment/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-cs/values-cs.xml",
+            "outputFile": "/home/k32/Side Projects/Segment/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-cs/values-cs.xml",
             "map": [
                 {
                     "source": "/home/k32/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/b9c6a55463a17c3e54da1ab5c7c4365a/res/values-cs/values-cs.xml",

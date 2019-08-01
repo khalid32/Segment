@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/k32/react_native_projects/Segment/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-vi/values-vi.xml",
+            "outputFile": "/home/k32/Side Projects/Segment/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-vi/values-vi.xml",
             "map": [
                 {
                     "source": "/home/k32/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/f2464a7aa07dc5178cfd7ab33b0012df/res/values-vi/values.xml",

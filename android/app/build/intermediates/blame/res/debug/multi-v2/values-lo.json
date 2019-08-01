@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/k32/react_native_projects/Segment/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lo/values-lo.xml",
+            "outputFile": "/home/k32/Side Projects/Segment/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lo/values-lo.xml",
             "map": [
                 {
                     "source": "/home/k32/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/c93519e932c9a49ac8353166c8e6f491/res/values-lo/values.xml",

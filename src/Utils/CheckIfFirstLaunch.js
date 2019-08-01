@@ -1,6 +1,7 @@
 // concept link: https://stackoverflow.com/questions/40715266/how-to-detect-first-launch-in-react-native
 
-import { AsyncStorage } from 'react-native';
+// import { AsyncStorage } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 
 const HAS_LAUNCHED = 'hasLaunched';
 
