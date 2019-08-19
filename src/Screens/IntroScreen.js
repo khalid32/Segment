@@ -55,10 +55,10 @@ export default class IntroScreen extends Component{
                 onMomentumScrollEnd={(e) => this.detectPaging(e)}
                 onContentSizeChange={(conHeight, conWidth) => { this.scrollHeight = conHeight }}
                 >
-                    <ImageBackground source={multiPic.pic1} style={{width, height}}></ImageBackground>
-                    <ImageBackground source={multiPic.pic2} style={{width, height}}></ImageBackground>
-                    <ImageBackground source={multiPic.pic3} style={{width, height}}></ImageBackground>
-                    <ImageBackground source={multiPic.pic4} style={{width, height}}></ImageBackground>
+                    <ImageBackground source={multiPic.pic1} style={styles.imageArrange}></ImageBackground>
+                    <ImageBackground source={multiPic.pic2} style={styles.imageArrange}></ImageBackground>
+                    <ImageBackground source={multiPic.pic3} style={styles.imageArrange}></ImageBackground>
+                    <ImageBackground source={multiPic.pic4} style={styles.imageArrange}></ImageBackground>
                 </ScrollView>
                 <View style={ styles.adjustBubbles }>
                     <BubbleView customStyle={ xOffset == 0 ? styles.showBubbleColor : styles.hideBubbleColor }/>
@@ -90,6 +90,7 @@ const styles = StyleSheet.create({
     adjustCenter: {
         justifyContent: 'center', alignItems: 'center',
     },
+    imageArrange: {width, height},
     navigateMethod: {
         flexDirection: 'row',
         height: width/5,
